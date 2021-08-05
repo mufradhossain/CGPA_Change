@@ -23,25 +23,11 @@ html_temp = """
 """
 st.markdown(html_temp, unsafe_allow_html=True)
 
-Living_Area = st.radio("What would you describe your living area as?", ('Rural area', 'Urban area'))
-
-Family = st.radio("Are you currently living with your family?", ('Yes', 'No'))
-
-Devices=st.radio("How many devices do you have available for online classes?", ('1', '2', 'more than 2'))
-
-Internet_type=st.radio("What type of internet connection do you have?", ('Broadband', 'Mobile Internet'))
-
 Internet_stability =st.radio("How stable is your Internet connection?", ('0', '1', '2', '3', '4'))
 
 Loadshedding= st.radio("How long are the usual hours for load shedding (power outage) in your area?", ('0 hours', '1-3 hours', '3-5 hours', 'more than 5 hours'))
 
-Studied_more= st.radio("When did you spend more time studying?", ('Before Online classes started.', 'After Online classes started'))
-
 CGPA_before= st.slider("What was your CGPA before online classes started?",0.0,4.0)
-
-Submission_type= st.radio("AWhich one do you think is easier for you?", ('Submitting assignments online', 'Submitting assignments offline'))
-
-Mental_health= st.radio("Do you think online education had any negative impact on your mental health?", ('Yes', 'No'))
 
 Online_exam =st.radio("Rate your experience with online examinations", ('0', '1', '2', '3', '4'))
 
@@ -52,24 +38,6 @@ Online_teacher =st.radio("Rate the quality of communication with your teacher du
 
 choicelist=[]
 if st.button('PREDICT'):
-    if Living_Area == 'Rural area':
-        choicelist.append(0)
-    else:
-        choicelist.append(1)
-    if Family == 'Yes':
-        choicelist.append(1)
-    else:
-        choicelist.append(0)
-    if Devices == '1':
-        choicelist.append(0)
-    elif Devices == '2':
-        choicelist.append(1)
-    else:
-        choicelist.append(2)
-    if Internet_type == 'Broadband':
-        choicelist.append(0)
-    else:
-        choicelist.append(1)
     choicelist.append(int(Internet_stability))
     if Loadshedding == '0 hours':
         choicelist.append(0)
@@ -79,19 +47,7 @@ if st.button('PREDICT'):
         choicelist.append(2)   
     else:
         choicelist.append(3)
-    if Studied_more == 'Before Online classes started.':
-        choicelist.append(1)
-    else:
-        choicelist.append(0)
     choicelist.append(CGPA_before)
-    if Submission_type == 'Submitting assignments online':
-        choicelist.append(1)
-    else:
-        choicelist.append(0)
-    if Mental_health == 'Yes':
-        choicelist.append(1)
-    else:
-        choicelist.append(0)
     choicelist.append(int(Online_exam))
     choicelist.append(int(Online_class))
     choicelist.append(int(Online_teacher))
