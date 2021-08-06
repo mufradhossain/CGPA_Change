@@ -99,7 +99,7 @@ if st.button('PREDICT'):
     loaded_log_clf = joblib.load("Logistic_Regression_compressed.joblib")
     result= loaded_log_clf.predict(finalarray)[0]
 
-    if result == 'Decreased ( হ্রাস পেয়েছে )':
+    if result == 'Decreased':
         st.warning("Your CGPA might Decrease!")
     else:
         st.success("Your CGPA will not Decrease!")
