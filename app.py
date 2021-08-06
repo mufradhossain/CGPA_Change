@@ -96,10 +96,10 @@ if st.button('PREDICT'):
     choicelist.append(int(Online_class))
     choicelist.append(int(Online_teacher))
     finalarray=(choicelist,)
-    loaded_rf = joblib.load("random_forest_compressed.joblib")
-    result= loaded_rf.predict(finalarray)[0]
+    loaded_log_clf = joblib.load("Logistic_Regression_compressed.joblib")
+    result= loaded_log_clf.predict(finalarray)[0]
 
     if result == 'Decreased ( হ্রাস পেয়েছে )':
-        st.warning("Your CGPA might not increase!")
+        st.warning("Your CGPA might Decrease!")
     else:
-        st.success("Your CGPA might increase!")
+        st.success("Your CGPA will not Decrease!")
