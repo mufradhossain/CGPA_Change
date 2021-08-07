@@ -17,7 +17,7 @@ html_temp = """
 <body style="background-color:red;">
 <div style="background-color:#1A4645 ;padding:10px">
 <h2 style="color:white;text-align:center;">Predict Change in CGPA during Online Semesters</h2>
-<p style="color:white;text-align:center;"> This model has been trained with data provided by private universiites of Bangladesh. To contribute towards the dataset, take <a href="https://forms.gle/Hfz955LPyrP8EKNM6" target="_blank">this survey</a></p>
+<p style="color:white;text-align:center;"> This model has been trained with data provided by private universiity students of Bangladesh. To contribute towards the dataset, take <a href="https://forms.gle/Hfz955LPyrP8EKNM6" target="_blank">this survey</a></p>
 </div>
 </body>
 """
