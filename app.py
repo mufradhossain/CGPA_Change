@@ -96,8 +96,8 @@ if st.button('PREDICT'):
     choicelist.append(int(Online_class))
     choicelist.append(int(Online_teacher))
     finalarray=(choicelist,)
-    loaded_log_clf = joblib.load("Logistic_Regression_compressed.joblib")
-    result= loaded_log_clf.predict(finalarray)[0]
+    loaded_rf_clf = joblib.load("random_forest_compressed.joblib")
+    result= loaded_rf_clf.predict(finalarray)[0]
 
     if result == 'Decreased':
         st.warning("Your CGPA might Decrease!")
